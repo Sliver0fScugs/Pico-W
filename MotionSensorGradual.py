@@ -38,8 +38,7 @@ def FourFlash():
         buzzer.off()
     for led in leds:
         led.off()
-
-e = 1
+        
 
 while True:
     if pir.value() == 1 and counting == False:
