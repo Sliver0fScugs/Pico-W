@@ -1,5 +1,5 @@
 import time
-from machine import Pin # type: ignore
+from machine import Pin
 
 pir = Pin(16, Pin.IN, Pin.PULL_DOWN)
 buzzer = Pin(7, Pin.OUT)
@@ -42,8 +42,7 @@ def FourFlash():
 e = 1
 
 while True:
-    #if pir.value() == 1 and counting == False:
-    if e == 1 and counting == False:
+    if pir.value() == 1 and counting == False:
         activeleds += 1
         counting = True
         ready = False
